@@ -1,0 +1,93 @@
+{
+  "_instrucoes": [
+    "Edite apenas os valores (a parte após os dois pontos).",
+    "Não remova aspas, vírgulas ou chaves — JSON é sensível a isso.",
+    "Caminhos de arquivo: use barras normais / e caminhos relativos à raiz do projeto.",
+    "Unidades de tamanho: 'height' do PsychoPy (1.0 = altura total da tela)."
+  ],
+
+  "experimento": {
+    "nome": "Teste de Reconhecimento Identidade de Faces - TRIFBr",
+    "tela_cheia": true,
+    "tamanho_janela": [1366, 768],
+    "monitor": "testMonitor"
+  },
+
+  "estimulos": {
+    "_unidade": "height (PsychoPy) —> 1.0 = altura total da tela. Ex: 0.5 = metade da altura.",
+    "video_alvo": {
+      "tamanho": [0.5, 0.4],
+      "posicao": [0.0, 0.20]
+    },
+    "imagens_resposta": {
+      "tamanho": [0.17, 0.25],
+      "posicoes": [
+        [-0.40, -0.25],
+        [-0.13, -0.25],
+        [ 0.13, -0.25],
+        [ 0.40, -0.25]
+      ]
+    }
+  },
+
+  "timing": {
+    "pausa_entre_blocos_seg": 0.5,
+    "tela_final_seg": 3.0
+  },
+
+  "textos": {
+    "welcome_titulo": "Bem-vindo(a) ao Teste de Reconhecimento\nde Identidade de Faces.",
+    "welcome_corpo": "TAREFA:\nUm vídeo com uma face aparecerá no centro. Identifique qual das 4 opções abaixo corresponde à mesma face.\n\nCOMO RESPONDER:\nUse o MOUSE para clicar na face OU Use o TECLADO (1, 2, 3, 4)\n\nDETALHES:\nO teste começará com uma breve etapa de familiarização.\nO teste é dividido em blocos. Haverá pausas automáticas entre eles.",
+    "welcome_avanco": "Vamos fazer um teste?\nPressione a BARRA DE ESPAÇO ou o BOTÃO ESQUERDO DO MOUSE para continuar.",
+    "exemplo_titulo": "Este é um exemplo deste teste.",
+    "exemplo_continuar": "Clique em uma das opções ou digite o seu número para continuar.",
+    "bloco_continuar": "Pressione a BARRA DE ESPAÇO ou o BOTÃO ESQUERDO DO MOUSE para continuar.",
+    "encerramento": "Agradecemos por participar!"
+  },
+   "cores": {
+    "_doc": "Cor da janela em RGB normalizado (-1.0 a 1.0). Textos aceitam nomes: 'black', 'white', 'gray'.",
+    "janela": "white",
+    "texto": "black"
+  },
+  "treino": {
+    "arquivo_csv": "../conditions/conditions-BT.csv"
+  },
+  "blocos": [
+    {
+      "nome": "BLOCO 1 — Baseline",
+      "arquivo_csv": "../conditions/conditions-B1.csv",
+      "ordem": "sequential",
+      "ativo": true
+    },
+    {
+      "nome": "BLOCO 2 — Maquiagem / Barba",
+      "arquivo_csv": "../conditions/conditions-B1.csv",
+      "ordem": "sequential",
+      "ativo": false
+    },
+    {
+      "nome": "BLOCO 3 — Óculos Transparente",
+      "arquivo_csv": "../conditions/conditions-B1.csv",
+      "ordem": "sequential",
+      "ativo": false
+    },
+    {
+      "nome": "BLOCO 4 — Óculos Escuro",
+      "arquivo_csv": "../conditions/conditions-B1.csv",
+      "ordem": "sequential",
+      "ativo": false
+    },
+    {
+      "nome": "BLOCO 5 — Expressão Sorriso",
+      "arquivo_csv": "../conditions/conditions-B1.csv",
+      "ordem": "sequential",
+      "ativo": false
+    }
+  ],
+
+"saida": {
+    "pasta": "../data",
+    "prefixo": "TRIFBr_participant"
+  }
+
+}
