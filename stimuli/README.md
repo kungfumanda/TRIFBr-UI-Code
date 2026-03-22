@@ -1,0 +1,1 @@
+banco de imagens (opções estáticas) e vídeos (movie shots)
