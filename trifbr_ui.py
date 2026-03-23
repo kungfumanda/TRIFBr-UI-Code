@@ -23,7 +23,8 @@ _DIR        = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(_DIR, "logic", "config.json")
 LOGIC_DIR = os.path.join(_DIR, "logic")
 TRIFBR_PATH = os.path.join(_DIR, "logic", "trifbr.py")
-PSYCHOPY_EXE = r"C:\Program Files\PsychoPy\python.exe"
+# PSYCHOPY_EXE = r"C:\Program Files\PsychoPy\python.exe" -> Para ver com Logs
+PSYCHOPY_EXE = r"C:\Program Files\PsychoPy\pythonw.exe"#-> Sem Logs
 
 
 # ─────────────────────────────────────────────────────────────────────────────
