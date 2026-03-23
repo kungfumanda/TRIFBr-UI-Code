@@ -12,6 +12,9 @@ from datetime import date
  
 from psychopy import core, data, event, gui, monitors, visual
 from psychopy.hardware import keyboard
+
+# Garante que caminhos relativos nos CSVs são resolvidos a partir desta pasta
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
  
 from trifbr_config import BLOCOS, CORES, EXP, SAIDA, TIMING, _DIR
 from trifbr_routines import (
