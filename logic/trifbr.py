@@ -8,6 +8,7 @@ Não edite parâmetros aqui — use o config.json.
 """
 
 import os
+import csv
 from datetime import date
  
 from psychopy import core, data, event, gui, monitors, visual
@@ -129,10 +130,25 @@ for bloco_idx, bloco in enumerate(blocos_ativos):
  
 # 5.4 Encerramento
 routine_final(win, frame_rate)
+win.close()
+
+# 5.5 Notas da sessão
+
+dlg_notas = gui.Dlg(title="Notas da sessão")
+dlg_notas.addField("Intercorrência:", False)
+dlg_notas.addField("Notas:", "")
+dados_notas = dlg_notas.show()
+ 
+if dlg_notas.OK:
+    this_exp.addData("NOTAS_intercorrencia", dados_notas[0])
+    this_exp.addData("NOTAS_texto",          dados_notas[1])
+else:
+    this_exp.addData("NOTAS_intercorrencia", False)
+    this_exp.addData("NOTAS_texto",          "")
  
 # ─────────────────────────────────────────────────────────────────────────────
 # 6. SALVAR E FECHAR
 # ─────────────────────────────────────────────────────────────────────────────
 #this_exp.saveAsWideText(filename + ".csv")
-win.close()
+# win.close()
 core.quit()
